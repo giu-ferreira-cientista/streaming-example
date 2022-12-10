@@ -1,0 +1,18 @@
+version: '1'
+services:
+  spark:
+    image: jupyter/all-spark-notebook:spark-3.1.1
+    container_name: spark
+    restart: unless-stopped
+    ports:
+      - "5500:5000"
+      - "8888:8888"    
+    user: root  
+    working_dir: /home/jovyan/work
+    environment:
+      JUPYTER_ENABLE_LAB: 1 
+      NB_USER: jovyan
+      NB_GID: 1000
+      CHOWN_HOME: 'yes'
+      CHOWN_HOME_OPTS: '-R'
+  
