@@ -15,4 +15,9 @@ services:
       NB_GID: 1000
       CHOWN_HOME: 'yes'
       CHOWN_HOME_OPTS: '-R'
+    volumes:
+      - ./notebooks:/home/jovyan/work/notebooks
+      - ./csv:/home/jovyan/work/csv
+      - ./json:/home/jovyan/work/json
+      - ./ml:/home/jovyan/work/ml
   
