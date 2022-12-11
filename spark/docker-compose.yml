@@ -19,5 +19,5 @@ services:
       - ./notebooks:/home/jovyan/work/notebooks
       - ./csv:/home/jovyan/work/csv
       - ./json:/home/jovyan/work/json
+      - ./data-lake:/home/jovyan/work/data-lake
       - ./ml:/home/jovyan/work/ml
-  
